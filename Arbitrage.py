@@ -54,6 +54,5 @@ start_token = 'tokenB'
 start_amount = 5
 max_profit, best_path = find_best_arbitrage(liquidity, start_token, start_amount)
 
-# print(f"Maximum profit: {max_profit}")
-print(f"Arbitrage path: {best_path}")
+print("path: " + "->".join(best_path))
 print(f"tokenB balance: {start_amount + max_profit}")
