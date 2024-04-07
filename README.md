@@ -18,7 +18,7 @@ Provide your profitable path, the amountIn, amountOut value for each swap, and y
 What is slippage in AMM, and how does Uniswap V2 address this issue? Please illustrate with a function as an example.
 
 > 1. 執行 swap 時，由於過程中可能有其他筆 swap 發生，造成 token 價格出現波動，導致最終實際得到的 token 數與你預期拿到的數量不一樣，兩者的差距就稱作滑價 (slippage)
-> 2. 因為滑價無法避免，所以在 Uniswap 中可以設定你可以接受的滑價範圍，若交易的成交價格低於容忍範圍，那麼當筆交易就不會成交，以此來避免 Uniswap 價格上下浮動太大帶來的損失。以 `UniswapV2Router` 的 `swapExactTokensForTokens` 這個函式為例:
+> 2. 雖然滑價無法避免，但在 Uniswap 中可以設定你可以接受的滑價範圍，若交易的成交價格低於容忍範圍，那麼當筆交易就不會成交，以此來避免 Uniswap 價格上下浮動太大帶來的損失。以 `UniswapV2Router` 的 `swapExactTokensForTokens` 這個函式為例:
 
 ```solidity
 function swapExactTokensForTokens(
